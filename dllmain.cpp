@@ -1,11 +1,11 @@
-﻿// dllmain.cpp : 定义 DLL 应用程序的入口点。
+﻿//新建dll项目，替换dllmian.cpp,编译成x64 
 #include "pch.h"
 #include <iostream>
 #include <string>
 
 const std::string version = "V0.0.10";
 
-extern "C" {
+extern "C" {//以此格式来添加引用函数
     __declspec(dllexport) int outadd(int a, int b);
     __declspec(dllexport) void outloaded();
 }
